@@ -1,48 +1,53 @@
-
-import img1 from '../images/oasis_infobyte_logo-removebg-preview.png'
-import img2 from '../images/logo-venue2-removebg-preview.png'
+import img1 from '../images/oasis_infobyte_logo-removebg-preview.png';
+import img2 from '../images/logo-venue2-removebg-preview.png';
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const Experience = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
+  return (
+    <section className="h-screen bg-texture bg-[#172b30]">
 
-    useEffect(() => {
-        Aos.init();
-    }, []);
+      <div className="text-yellow-600 text-3xl text-center lg:text-3xl lg:p-1 pt-10">
+        EXPERIENCE
+      </div>
 
-    return (
-        <section className='h-[100vh] bg-texture bg-[#172b30] lg:[100vh] '>
-            <div className= ' text-yellow-600  text-3xl text-center lg:text-3xl lg:p-1'>EXPERIENCE</div>
-            <div className='md:grid grid-flow-col md:pt-24 md:gap-20 place-content-center'>
-                <div className="pt-10 flex justify-center" data-aos="flip-left">
-                    <div className="pt-1 border-[1px] border-yellow-600  rounded-[40px] bg-[#06181d] ">
-                        <div className="flex justify-center animate-bounce-up-down pt-11 " >
-                            <img src={img1} alt="" />
-                        </div>
-                        <div className="p-6 text-white justify-center text-center">
-                            <h1 className="text-yellow-500 text-2xl">Web-development & Design</h1>
-                            <h1 className="text-lg">Oasis Infobyte</h1>
-                            <h1>15-Feb-24 to 15-Mar-24</h1>
-                        </div>
-                    </div>
-                </div>
-                <div className="pt-10 flex justify-center " data-aos="flip-left">
-                    <div className="pt-1 border-[1px] border-yellow-600 rounded-[40px]  bg-[#06181d]">
-                        <div className="flex justify-center  animate-bounce-up-down pt-11 w-[300px]" >
-                            <img src={img2} alt="" />
-                        </div>
-                        <div className="p-6 text-white  items-center justify-center text-center">
-                            <h1 className="text-yellow-500 text-2xl">Intern-Software-Developer</h1>
-                            <h1 className="text-lg">Tshimologong</h1>
-                            <h1>18-Jul-24 to Present</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+      <div className="grid grid-cols-2 place-self-center py-10 md:grid-cols-2 gap-12 px-4 md:px-10 lg:px-20">
 
-export default Experience
+        <div
+          className="flex flex-col items-center border-[1px] border-yellow-600 rounded-[40px] bg-[#06181d] w-[300px]"
+          data-aos="flip-left"
+        >
+          <div className="flex justify-center animate-bounce-up-down pt-11">
+            <img src={img1} alt="Oasis Infobyte Logo" className="w-[200px]" />
+          </div>
+          <div className="p-6 text-white text-center">
+            <h1 className="text-yellow-500 text-2xl">Web-development & Design</h1>
+            <h1 className="text-lg">Oasis Infobyte</h1>
+            <h1>15-Feb-24 to 15-Mar-24</h1>
+          </div>
+        </div>
+
+        <div
+          className="flex flex-col items-center border-[1px] border-yellow-600 rounded-[40px] bg-[#06181d] w-[300px]"
+          data-aos="flip-left"
+        >
+          <div className="flex justify-center animate-bounce-up-down pt-11">
+            <img src={img2} alt="Tshimologong Logo" className="w-[200px]" />
+          </div>
+          <div className="p-6 text-white text-center">
+            <h1 className="text-yellow-500 text-2xl">Intern-Software-Developer</h1>
+            <h1 className="text-lg">Tshimologong</h1>
+            <h1>18-Jul-24 to Present</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

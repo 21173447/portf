@@ -5,15 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'mobile': '320px', // Additional breakpoint for very small devices
+      'tablet': '640px',
+      'laptop': '1024px',
+      'desktop': '1280px',
+    },
     fontFamily: {
       sans: ['"Inter var"', 'sans-serif'],
     },
     extend: {
-      
       animation: {
         "loop-scroll": "loop-scroll 70s linear infinite",
         "bounce-up-down": "bounceUpDown 3s infinite", 
-        "Side": "SideToSide 7s infinite", 
+        "side-to-side": "SideToSide 7s infinite", 
       },
       keyframes: {
         "loop-scroll": {
@@ -21,15 +26,14 @@ export default {
           to: { transform: "translateX(-100%)" },
         },
         bounceUpDown: {
-          '0%, 100%': { transform:'translateY(0)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
-
         SideToSide: {
-          '0%, 100%': { transform:'translateX(0)' },
+          '0%, 100%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(-10px)' },
+        },
       },
-    },
       backgroundImage: {
         'hero1': "url('/src/images/pexels-stywo-1054218.jpg')",
         'texture': "url('/src/images/bg-texture.png')",
@@ -37,4 +41,4 @@ export default {
     },
   },
   plugins: [],
-}
+};
