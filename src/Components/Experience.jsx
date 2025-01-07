@@ -10,13 +10,13 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="h-screen bg-texture bg-[#172b30]">
+    <section className="h-screen bg-texture bg-[#172b30] py-24">
 
       <div className="text-yellow-600 text-3xl text-center lg:text-3xl lg:p-1 pt-10">
         EXPERIENCE
       </div>
 
-      <div className="grid grid-cols-2 place-self-center py-10 md:grid-cols-2 gap-12 px-4 md:px-10 lg:px-20">
+      <div className="grid grid-cols-2  place-self-center py-32 md:grid-cols-2 gap-12 px-4 md:px-10 lg:px-20">
 
         <div
           className="flex flex-col items-center border-[1px] border-yellow-600 rounded-[40px] bg-[#06181d] w-[300px]"
