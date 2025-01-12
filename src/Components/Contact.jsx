@@ -8,9 +8,9 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <section className="bg-[#172b30] py-10 px-6 lg:px-20 min-h-screen">
+    <section className="bg-[#172b30] py-10 px-6 lg:px-20 bg-texture ">
       <div className="text-center text-yellow-600 text-2xl md:text-3xl lg:text-4xl pb-8">
-        Contact Us
+        CONTACT
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

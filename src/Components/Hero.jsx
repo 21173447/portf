@@ -3,6 +3,7 @@ import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { VscGithub } from "react-icons/vsc";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import img1 from '../images/Untitled Project.jpg';
 
 const Hero = () => {
   useEffect(() => {
@@ -11,11 +12,20 @@ const Hero = () => {
 
   return (
     <section className="relative bg-hero1 bg-cover bg-center h-[100vh] bg-fixed">
-   
       <div className="absolute inset-0 bg-black opacity-60"></div>
 
+      
 
       <div className="relative z-10 text-center flex flex-col items-center justify-center h-full px-6 md:px-12 lg:px-20">
+      <div className="flex justify-center w-full lg:w-1/2" data-aos="fade-up">
+      <img
+  className="w-64 sm:w-80 md:w-[24rem] lg:w-[28rem] rounded-full shadow-lg border-8 border-dashed border-yellow-400 border-transition-transform duration-300 transform hover:scale-105 border-animate"
+  src={img1}
+  alt="About Me"
+/>
+
+
+      </div>
         <h1
           className="text-5xl text-white md:text-4xl lg:text-5xl font-bold"
           data-aos="zoom-in"
@@ -33,7 +43,6 @@ const Hero = () => {
           skills to deliver high-quality, modern user experiences.
         </p>
 
-    
         <div
           className="flex justify-center gap-6 mt-10 text-4xl md:text-3xl text-white"
           data-aos="fade-down"

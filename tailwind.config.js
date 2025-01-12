@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     screens: {
-      'mobile': '320px', // Additional breakpoint for very small devices
+      'mobile': '320px', 
       'tablet': '640px',
       'laptop': '1024px',
       'desktop': '1280px',
