@@ -9,15 +9,15 @@ const About = () => {
     }, []);
 
     return (
-        <section className="bg-black h-auto font-sans py-12">
+        <section className="bg-texture bg-[#172b30]  h-auto font-sans py-12">
             <div className="text-center text-yellow-400 text-3xl md:text-5xl lg:text-6xl pb-8" data-aos="fade-in">
                 ABOUT ME
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-16 px-4 md:px-12 lg:px-24">
-                {/* Tech Skills Block */}
+
                 <div className="text-center lg:text-left space-y-8 w-full lg:w-1/2" data-aos="zoom-in">
-                    <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex items-center space-x-4">
+                    <div className="bg-[#06181d] p-6 rounded-lg shadow-lg flex items-center space-x-4">
                         <FaCode className="text-yellow-400 text-3xl md:text-4xl lg:text-5xl" />
                         <div>
                             <h3 className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-semibold pb-2">
@@ -29,9 +29,9 @@ const About = () => {
                             </ul>
                         </div>
                     </div>
-                    
-                    {/* Professional Background Block */}
-                    <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex items-center space-x-4">
+
+
+                    <div className="bg-[#06181d] p-6 rounded-lg shadow-lg flex items-center space-x-4">
                         <FaGraduationCap className="text-yellow-400 text-3xl md:text-4xl lg:text-5xl" />
                         <div>
                             <h3 className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-semibold pb-2">
@@ -43,9 +43,9 @@ const About = () => {
                             </ul>
                         </div>
                     </div>
-                    
-                  
-                    <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex items-center space-x-4">
+
+
+                    <div className="bg-[#06181d] p-6 rounded-lg shadow-lg flex items-center space-x-4">
                         <FaChess className="text-yellow-400 text-3xl md:text-4xl lg:text-5xl" />
                         <div>
                             <h3 className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-semibold pb-2">
@@ -60,7 +60,7 @@ const About = () => {
                 </div>
             </div>
 
-            {/* Call to Action Block */}
+          
             <div className="text-center pt-8" data-aos="fade-up">
                 <button className="bg-yellow-400 py-3 px-8 text-base md:text-lg rounded-full text-black shadow-lg hover:bg-yellow-500 transition-all duration-300">
                     Download CV

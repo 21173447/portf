@@ -14,13 +14,13 @@ const ContactUs = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-  
+
         <div
-          className="bg-[#06181d] p-8 rounded-lg shadow-lg"
+          className="bg-[#06181d] p-8  shadow-lg"
           data-aos="fade-right"
         >
           <h2 className="text-yellow-500 text-xl font-semibold mb-4">
-            Send Us a Message
+            Get in Touch
           </h2>
           <form>
             <div className="mb-4">
@@ -91,16 +91,13 @@ const ContactUs = () => {
           </p>
           <div>
             <h3 className="font-semibold text-yellow-500">Email:</h3>
-            <p>contact@yourwebsite.com</p>
+            <p>tshegofatsononyane009@gmail.com</p>
           </div>
           <div>
             <h3 className="font-semibold text-yellow-500">Phone:</h3>
-            <p>+123 456 7890</p>
+            <p>+27 81 503 8545</p>
           </div>
-          <div>
-            <h3 className="font-semibold text-yellow-500">Address:</h3>
-            <p>123 Main Street, City, Country</p>
-          </div>
+
         </div>
       </div>
     </section>

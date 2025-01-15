@@ -10,39 +10,45 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="bg-[#172b30]  bg-texture py-16">
+    <section className="bg-[#172b30] bg-texture py-16">
       <div className="text-center text-yellow-600 text-3xl mb-12">
         EXPERIENCE
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-16 lg:px-24">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-yellow-600"></div>
+          <div className="grid grid-cols-9 gap-y-12">
+            <div className="col-span-4 flex justify-end items-center relative">
+              <div
+                className="bg-[#06181d] text-white p-4 rounded-md"
+                data-aos="fade-right"
+              >
+                <img src={img1} alt="Experience 1" className="w-28 h-28  rounded-full mb-2   animate-bounce-up-down" />
+                <h4 className="font-bold text-yellow-600">Oasis Infobyte</h4>
+                <p>Web Development & Design (Feb 2024 - Mar 2024)</p>
+              </div>
+            </div>
+            <div className="col-span-1 flex justify-center relative">
 
-        <div
-          className="flex flex-col items-center border border-yellow-600  bg-[#06181d] shadow-lg "
-          data-aos="fade-up"
-        >
-          <div className="w-32 h-32 flex items-center justify-center rounded-full bg-[#172b30] mt-8 mb-6 animate-bounce-up-down">
-            <img src={img1} alt="Oasis Infobyte Logo" className="w-[150px] object-contain" />
-          </div>
-          <div className="px-6 py-4 text-center">
-            <h2 className="text-yellow-500 text-2xl font-bold mb-2">Web Development & Design</h2>
-            <h3 className="text-white text-lg">Oasis Infobyte</h3>
-            <p className="text-gray-400">15-Feb-24 to 15-Mar-24</p>
-          </div>
-        </div>
+              <div className="w-6 h-6 rounded-full bg-[#06181d] border-4 border-white"></div>
+            </div>
+            <div className="col-span-4"></div>
+            <div className="col-span-4"></div>
+            <div className="col-span-1 flex justify-center relative">
 
-    
-        <div
-          className="flex flex-col items-center border border-yellow-600  bg-[#06181d] shadow-lg "
-          data-aos="fade-up"
-        >
-          <div className="w-32 h-32 flex items-center justify-center rounded-full bg-[#172b30] mt-8 mb-6 animate-bounce-up-down">
-            <img src={img2} alt="Tshimologong Logo" className="w-[150px] object-contain" />
-          </div>
-          <div className="px-6 py-4 text-center">
-            <h2 className="text-yellow-500 text-2xl font-bold mb-2">Intern - Software Developer</h2>
-            <h3 className="text-white text-lg">Tshimologong</h3>
-            <p className="text-gray-400">18-Jul-24 to Present</p>
+              <div className="w-6 h-6 rounded-full bg-[#06181d] border-4 border-white"></div>
+            </div>
+            <div className="col-span-4 flex justify-start items-center relative">
+              <div
+                className="bg-[#06181d] text-white p-4  rounded-md"
+                data-aos="fade-left"
+              >
+                <img src={img2} alt="Experience 2" className="w-28 h-28 rounded-full mb-2   animate-bounce-up-down" />
+                <h4 className="font-bold text-yellow-600">Tshimologong</h4>
+                <p>Software developer intern (Jul 2024 - Present)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -9,20 +9,16 @@ const Certificates = () => {
 
   const certificates = [
     {
-      title: "Full Stack Web Development",
-      issuer: "Coursera",
+      title: "Diploma in  it in software development",
+      issuer: "Rosebank Collage",
+      date: "June 2024",
+    },
+    {
+      title: "Web development & design",
+      issuer: "Osasis Infobyte",
       date: "March 2024",
     },
-    {
-      title: "Software Development Fundamentals",
-      issuer: "Udemy",
-      date: "January 2023",
-    },
-    {
-      title: "Blockchain Essentials",
-      issuer: "IBM Skills Network",
-      date: "July 2024",
-    },
+
   ];
 
   return (
@@ -35,7 +31,7 @@ const Certificates = () => {
         {certificates.map((certificate, index) => (
           <div
             key={index}
-            className="bg-[#06181d] p-6 rounded-lg shadow-lg hover:scale-105 transform transition-transform duration-300"
+            className="bg-[rgb(6,24,29)] p-6  shadow-lg hover:scale-105 transform transition-transform duration-300"
             data-aos="fade-up"
             data-aos-delay={`${index * 100}`}
           >
