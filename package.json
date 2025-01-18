@@ -17,12 +17,15 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.18.0",
     "icons": "^1.0.0",
+    "latest-react-3d-icons": "^1.0.4",
     "motion": "^11.18.0",
     "raect": "^1.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
-    "react-tilt": "^1.0.2"
+    "react-tilt": "^1.0.2",
+    "uuid-by-string": "^4.0.0",
+    "wouter": "^3.3.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

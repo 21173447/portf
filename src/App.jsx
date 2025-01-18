@@ -7,6 +7,8 @@ import Experience from './Components/Experience'
 import Hero from './Components/Hero'
 import Languages from './Components/Languages'
 import Projects from './Components/Projects'
+import Gl from './threejs/Gl'
+
 
 
 
@@ -22,6 +24,9 @@ function App() {
     <Experience/>  
     <Certificates/>
     <Projects/>
+    <Gl/>
+    
+
     <ContactUs/>
    
  

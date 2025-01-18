@@ -7,6 +7,11 @@ import img1 from '../images/Untitled Project.jpg';
 import HeroBgAnimation from '../Hero/HeroBgAnimation';
 import { motion } from 'framer-motion';
 import Stars from "../animation/stars"
+import { Tilt } from 'react-tilt';
+
+
+
+
 
 const Hero = () => {
   useEffect(() => {
@@ -15,6 +20,7 @@ const Hero = () => {
 
   return (
     <motion.div className="relative bg-hero1 bg-cover bg-center h-[100vh] bg-fixed">
+
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 text-center flex flex-col items-center justify-center h-full px-6 md:px-12 lg:px-20">
         <div className="relative flex justify-center w-full lg:w-1/2" data-aos="fade-up">
