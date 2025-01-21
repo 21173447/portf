@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@react-three/drei": "^9.121.1",
     "@react-three/fiber": "^8.17.12",
     "animejs": "^3.2.2",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^11.18.0",
+    "framer-motion": "^11.18.1",
     "icons": "^1.0.0",
     "latest-react-3d-icons": "^1.0.4",
     "motion": "^11.18.0",
@@ -24,6 +25,7 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-tilt": "^1.0.2",
+    "styled-components": "^6.1.14",
     "uuid-by-string": "^4.0.0",
     "wouter": "^3.3.5"
   },
