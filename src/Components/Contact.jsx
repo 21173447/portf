@@ -16,7 +16,7 @@ const ContactUs = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
         <div
-          className="bg-[#06181d] p-8  shadow-lg"
+          className=" p-8  shadow-lg"
           data-aos="fade-right"
         >
           <h2 className="text-yellow-500 text-xl font-semibold mb-4">

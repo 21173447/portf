@@ -1,84 +1,124 @@
-import React, { useRef } from "react";
-import TagCloud from "https://cdn.skypack.dev/TagCloud@2.2.0";
-import { motion } from "framer-motion"; // Import motion
-import Stars from "../../animation/stars";
-import { FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGitAlt, FaDatabase } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { 
+  FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs, FaGitAlt, 
+  FaDatabase, FaPython, FaDocker, FaAws 
+} from 'react-icons/fa';
+import { 
+  SiTypescript, SiTailwindcss, SiMongodb, SiGraphql, 
+  SiNextdotjs, SiVite 
+} from 'react-icons/si';
 
-const Sphere = () => {
-  const sphereMounted = useRef(false);
-
-  React.useEffect(() => {
-    if (sphereMounted.current === false) {
-      const myTags = [
-        "JavaScript",
-        "TypeScript",
-        "CSS",
-        "TailwindCSS",
-        "HTML",
-        "Node.js",
-        "React",
-        "git",
-        "JSON",
-        "Express",
-        "MongoDB",
-        "github",
-      ];
-
-      TagCloud(".sphere", myTags, {
-        radius: 200, // radius in px
-        maxSpeed: "fast",
-        initSpeed: "fast",
-        direction: 135,
-        keep: true,
-      });
-    }
-
-    return () => {
-      sphereMounted.current = true;
-    };
-  }, []);
+const TechSphere = () => {
+  const stars = Array.from({ length: 120 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 3 + 1,
+    delay: Math.random() * 2,
+  }));
+  
+  const techStack = [
+    { name: "JavaScript", icon: FaJsSquare, color: "text-yellow-400" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
+    { name: "React", icon: FaReact, color: "text-cyan-400" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+    { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
+    { name: "CSS3", icon: FaCss3Alt, color: "text-blue-400" },
+    { name: "TailwindCSS", icon: SiTailwindcss, color: "text-cyan-300" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
+    { name: "Git", icon: FaGitAlt, color: "text-red-500" },
+    { name: "Database", icon: FaDatabase, color: "text-purple-500" },
+    { name: "Python", icon: FaPython, color: "text-yellow-300" },
+    { name: "Docker", icon: FaDocker, color: "text-blue-500" },
+    { name: "AWS", icon: FaAws, color: "text-orange-400" },
+    { name: "GraphQL", icon: SiGraphql, color: "text-pink-500" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-gray-100" },
+    { name: "Vite", icon: SiVite, color: "text-purple-400" },
+  ];
 
   return (
-    <motion.div className="relative bg-[#06181d] bg-cover bg-fixed py-10">
-      <Stars />
-      <div className="text-center mb-8">
-        <h1 className="text-3xl text-yellow-600">TOOLS & LANGUAGES</h1>
+    <motion.section 
+      className="relative  bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-pink-900 to-indigo-900 opacity-20 animate-loop-scroll" />
+
+      {/* Stars */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {stars.map((star) => (
+          <motion.div
+            key={star.id}
+            className="absolute bg-white rounded-full shadow-lg"
+            style={{
+              left: `${star.x}%`,
+              top: `${star.y}%`,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+            }}
+            animate={{
+              opacity: [0.2, 1, 0.2],
+              scale: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 3,
+              delay: star.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
       </div>
 
-      <div className="sphere mx-auto  w-1/2 text-white text-xl flex justify-center hover:text-yellow-500"></div>
+      {/* Header */}
+      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+        <motion.h1
+          className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-4"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          TECH STACK
+        </motion.h1>
+        <motion.p
+          className="text-xl md:text-2xl text-gray-300"
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Exploring the universe of technologies
+        </motion.p>
 
-      <div className="flex justify-center flex-wrap gap-6 mt-10">
-        <div className="flex flex-col items-center">
-          <FaReact className="text-blue-500 text-4xl" />
-          <span className="text-white">React</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <FaHtml5 className="text-orange-500 text-4xl" />
-          <span className="text-white">HTML</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <FaCss3Alt className="text-blue-400 text-4xl" />
-          <span className="text-white">CSS</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <FaJsSquare className="text-yellow-500 text-4xl" />
-          <span className="text-white">JavaScript</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <FaNodeJs className="text-green-500 text-4xl" />
-          <span className="text-white">Node.js</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <FaGitAlt className="text-red-600 text-4xl" />
-          <span className="text-white">Git</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <FaDatabase className="text-green-700 text-4xl" />
-          <span className="text-white">MongoDB</span>
-        </div>
+        {/* Tech Icons Grid */}
+        <motion.div 
+          className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-4xl mx-auto mt-16"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          {techStack.map((tech, index) => {
+            const IconComponent = tech.icon;
+            return (
+              <motion.div
+                key={tech.name}
+                className="flex flex-col items-center p-4 rounded-xl bg-gray-800/40 backdrop-blur-md border border-gray-600/40 hover:border-purple-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 group"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.08, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.1, y: -5 }}
+              >
+                <IconComponent className={`text-4xl md:text-5xl ${tech.color} group-hover:animate-pulse`} />
+                <span className="text-xs text-gray-200 mt-2 text-center font-mono">{tech.name}</span>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 
-export default Sphere;
+export default TechSphere;

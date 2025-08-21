@@ -22,7 +22,7 @@ const Certificates = () => {
   ];
 
   return (
-    <section className="bg-[#172b30]   py-10 px-6 lg:px-20 bg-texture ">
+    <section className="  py-10 px-6 lg:px-20 bg-texture ">
       <div className="text-center text-yellow-600 text-3xl md:text-3xl lg:text-4xl pb-8">
         CERTIFICATES
       </div>

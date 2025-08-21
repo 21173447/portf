@@ -1,73 +1,63 @@
-import React, { useEffect } from 'react';
-import { FaCode, FaGraduationCap, FaBriefcase, FaChess, FaHiking, FaUtensils } from 'react-icons/fa';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { Code, Palette, Smartphone, Server } from "lucide-react";
 
 const About = () => {
-    useEffect(() => {
-        Aos.init();
-    }, []);
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
-    return (
-        <section className="bg-texture bg-[#172b30]  h-auto font-sans py-12">
-            <div className="text-center text-yellow-400 text-3xl md:text-5xl lg:text-6xl pb-8" data-aos="fade-in">
-                ABOUT ME
-            </div>
+  const skills = [
+    { icon: Code, name: "Frontend Development", level: 80 },
+    { icon: Server, name: "Backend Development", level: 70 },
+    { icon: Palette, name: "UI/UX Design", level: 80 },
+    { icon: Smartphone, name: "Mobile Development", level: 75 },
+  ];
 
-            <div className="flex flex-col lg:flex-row items-center gap-16 px-4 md:px-12 lg:px-24">
+  return (
+    <section
+      className="bg-[#1b1b2f] h-auto font-sans py-16 relative overflow-hidden bg-texture"
+    >
+      {/* Glowing purple shapes */}
+      <div className="absolute top-10 left-20 w-72 h-36 bg-purple-600 opacity-30 rounded-full filter blur-3xl"></div>
+      <div className="absolute top-32 right-24 w-96 h-44 bg-pink-600 opacity-20 rounded-full filter blur-2xl"></div>
+      <div className="absolute top-52 left-40 w-56 h-28 bg-purple-500 opacity-25 rounded-full filter blur-xl"></div>
 
-                <div className="text-center lg:text-left space-y-8 w-full lg:w-1/2" data-aos="zoom-in">
-                    <div className="bg-[#06181d] p-6 rounded-lg shadow-lg flex items-center space-x-4">
-                        <FaCode className="text-yellow-400 text-3xl md:text-4xl lg:text-5xl" />
-                        <div>
-                            <h3 className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-semibold pb-2">
-                                Tech Skills
-                            </h3>
-                            <ul className="text-gray-200 text-base sm:text-lg lg:text-xl leading-relaxed space-y-2">
-                                <li>Proficient in JavaScript, React, Node.js, and Python</li>
-                                <li>Experienced in building responsive web applications</li>
-                            </ul>
-                        </div>
-                    </div>
+      {/* Overlay for contrast */}
+      <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
 
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <h2
+          className="text-5xl text-center py-9 md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-4"
+          data-aos="fade-up"
+        >
+         SKILLS
+        </h2>
 
-                    <div className="bg-[#06181d] p-6 rounded-lg shadow-lg flex items-center space-x-4">
-                        <FaGraduationCap className="text-yellow-400 text-3xl md:text-4xl lg:text-5xl" />
-                        <div>
-                            <h3 className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-semibold pb-2">
-                                Professional Background
-                            </h3>
-                            <ul className="text-gray-200 text-base sm:text-lg lg:text-xl leading-relaxed space-y-2">
-                                <li>Graduated from Rosebank College with a Diploma in Software Development</li>
-                                <li>Full-Stack Developer with extensive experience in problem-solving</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div className="bg-[#06181d] p-6 rounded-lg shadow-lg flex items-center space-x-4">
-                        <FaChess className="text-yellow-400 text-3xl md:text-4xl lg:text-5xl" />
-                        <div>
-                            <h3 className="text-yellow-400 text-xl md:text-2xl lg:text-3xl font-semibold pb-2">
-                                Hobbies & Interests
-                            </h3>
-                            <ul className="text-gray-200 text-base sm:text-lg lg:text-xl leading-relaxed space-y-2">
-                                <li>Passionate about learning new technologies</li>
-                                <li>Enjoy playing chess, hiking, and exploring new cuisines</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div className="space-y-6" data-aos="fade-left">
+          {skills.map((skill, index) => {
+            const Icon = skill.icon;
+            return (
+              <div key={index} className="group">
+                <div className="flex items-center mb-2">
+                  <Icon className="w-5 h-5 text-purple-400 mr-3" />
+                  <span className="text-slate-100 font-medium">{skill.name}</span>
+                  <span className="ml-auto text-slate-300">{skill.level}%</span>
                 </div>
-            </div>
-
-          
-            <div className="text-center pt-8" data-aos="fade-up">
-                <button className="bg-yellow-400 py-3 px-8 text-base md:text-lg rounded-full text-black shadow-lg hover:bg-yellow-500 transition-all duration-300">
-                    Download CV
-                </button>
-            </div>
-        </section>
-    );
+                <div className="w-full bg-slate-700 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

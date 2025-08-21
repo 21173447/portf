@@ -37,6 +37,7 @@ export default {
       backgroundImage: {
         'hero1': "url('/src/images/pexels-stywo-1054218.jpg')",
         'texture': "url('/src/images/bg-texture.png')",
+           'window': "url('/src/images/eran-menashri--JaaRZYHY0s-unsplash.jpg')",
       },
     },
   },

@@ -19,6 +19,7 @@
     "framer-motion": "^11.18.1",
     "icons": "^1.0.0",
     "latest-react-3d-icons": "^1.0.4",
+    "lucide-react": "^0.525.0",
     "motion": "^11.18.0",
     "raect": "^1.0.4",
     "react": "^18.3.1",

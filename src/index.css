@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+.sphere-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Fullscreen */
+  background-color: black; /* Dark background for glow */
+}
+
+.sphere {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #00ffff, #0044ff);
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #0044ff, 0 0 90px #00ffff;
+  animation: spin 6s linear infinite, glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 30px #00ffff, 0 0 60px #0044ff, 0 0 90px #00ffff;
+  }
+  to {
+    box-shadow: 0 0 50px #00ffff, 0 0 100px #0044ff, 0 0 150px #00ffff;
+  }
+}
