@@ -1,6 +1,6 @@
 import './App.css'
 import About from './Components/About'
-import Certificates from './Components/Certificates'
+
 import ContactUs from './Components/Contact'
 
 import Hero from './Components/Hero'
@@ -19,7 +19,7 @@ function App() {
       <Sphere />
       <Projects />
 
-      <Certificates />
+  
       <ContactUs />
     </>
   )
